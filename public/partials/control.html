@@ -1,0 +1,42 @@
+<div class="main">
+    <div class="row" ng-show="stage=='choice'">
+        <div class="col-xs-4 col-sm-offset-4" ng-show="remoteReady">
+            <ul class="nav nav-pills nav-stacked">
+                <li ng-repeat="quizz in d.list" ng-click="select(quizz)" eat-click>
+                    <a href="#">
+                        <h5 class="uptitle" ng-bind="quizz.name"></h5>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row" ng-show="stage=='quizz'">
+        <div class="col-xs-12 text-center">
+            <div ng-bind="answerartist"></div>
+            <div ng-bind="answertitle"></div>
+        </div>
+    </div>
+    <div class="row" ng-show="stage=='quizz'">
+        <div class="col-xs-4 text-center">
+            <div class="text-answer-ctl" ng-bind="t1"></div>
+            <div class="img-circle title T1" ng-click="artist_t1()" ng-hide="showAnswer" ng-class="{valid:artist=='t1'}">artiste</div>
+            <div class="img-circle title T1" ng-click="title_t1()" ng-hide="showAnswer" ng-class="{valid:title=='t1'}">titre</div>
+        </div>
+        <div class="col-xs-4 text-center">
+            <div class="text-answer-ctl" ng-show="endQuizz">
+                Fin
+            </div>
+            <div class="img-circle guessButton" ng-hide="showAnswer" ng-click="readGuess()">
+                <span class="glyphicon glyphicon-play" ng-hide="reading"></span>
+                <span class="glyphicon glyphicon-pause" ng-show="reading"></span>
+            </div>
+            <div class="img-circle title OK" ng-click="OK()">OK {{quizzList.length}}</div>
+        </div>
+        <div class="col-xs-4 text-center">
+            <div class="text-answer-ctl" ng-bind="t2"></div>
+            <div class="img-circle title T2" ng-click="artist_t2()" ng-hide="showAnswer" ng-class="{valid:artist=='t2'}">artiste</div>
+            <div class="img-circle title T2" ng-click="title_t2()" ng-hide="showAnswer" ng-class="{valid:title=='t2'}">titre</div>
+        </div>
+
+    </div>
+</div>

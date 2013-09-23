@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div
+    .container-fluid
+      .row-fluid
+        .span4
+          .chart(data-percent="73") 73%
+          script(type='text/javascript').
+            $('.chart').easyPieChart({
+              animate: 2000
+            });
+            setTimeout(function() {
+              $('.chart').data('easyPieChart').update(40);
+            }, 5000);

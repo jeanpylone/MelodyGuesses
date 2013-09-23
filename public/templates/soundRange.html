@@ -1,0 +1,9 @@
+<div class="soundRange text-center" ng-style="getStyle()">
+    <div class="playBar">' +
+        '</div>
+    <glyph icon="none"></glyph>
+    <glyph icon="play" ng-hide="status=='play'"></glyph>
+    <glyph icon="none" ng-hide="status=='play'"></glyph>
+    <glyph icon="pause" ng-show="status=='play'"></glyph>
+    <glyph icon="stop" ng-show="status=='play'" ng-click="stop($event)"></glyph>
+</div>

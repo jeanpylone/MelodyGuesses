@@ -1,0 +1,9 @@
+<div>
+    <div>
+        <glyph icon="lock" ng-show="d.currenttitle.locked"></glyph>
+        {{d.currenttitle.id3info.metadata.artist}} - {{d.currenttitle.id3info.metadata.title}}
+    </div>
+    <sound-editor></sound-editor>
+    <button class="btn btn-primary" ng-click="save()">Save</button>
+    <button class="btn" ng-click="saveAndClose()">Save and close</button>
+</div>

@@ -1,0 +1,38 @@
+<div class="main" style="overflow: hidden">
+    <div class="row" ng-show="stage=='choice'">
+        <div class="col-xs-4 col-sm-offset-4">
+            <div class="text-answer">Quizz</div>
+
+        </div>
+    </div>
+    <div class="row" ng-show="stage=='quizz'">
+        <div class="col-xs-12 text-center text-answer" ng-show="showAnswer">
+            <div ng-bind="answerartist"></div>
+            <div ng-bind="answertitle"></div>
+        </div>
+    </div>
+    <div class="row" ng-show="stage=='quizz'">
+        <div class="col-xs-4 text-center">
+            <div class="text-answer" ng-bind="t1"></div>
+            <div class="img-circle title T1" ng-hide="showAnswer" ng-class="{valid:artist=='t1'}">artiste</div>
+            <div class="img-circle title T1" ng-hide="showAnswer" ng-class="{valid:title=='t1'}">titre</div>
+        </div>
+        <div class="col-xs-4 text-center">
+            <div class="text-answer" ng-show="endQuizz">
+                Fin
+            </div>
+            <div class="text-answer" ng-hide="showAnswer">
+                Quizz
+            </div>
+            <div class="text-answer" ng-hide="showAnswer" ng-bind="quizzTitle">
+
+            </div>
+        </div>
+        <div class="col-xs-4 text-center">
+            <div class="text-answer" ng-bind="t2"></div>
+            <div class="img-circle title T2" ng-hide="showAnswer" ng-class="{valid:artist=='t2'}">artiste</div>
+            <div class="img-circle title T2" ng-hide="showAnswer" ng-class="{valid:title=='t2'}">titre</div>
+        </div>
+
+    </div>
+</div>

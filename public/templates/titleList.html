@@ -1,0 +1,12 @@
+<div>
+    <ul class="nav nav-pills nav-stacked">
+        <li ng-repeat="title in d.list" ng-click="select(title)"  eat-click>
+            <a href="#" ng-class="{'locked' : title.locked, 'fileerror' : !title.fileexists}">
+                <glyph icon="lock" ng-show="title.locked" class="pull-right"></glyph>
+                <glyph icon="remove" ng-hide="title.locked" class="pull-right" ng-click="delete(title)"></glyph>
+                <h5 class="uptitle" ng-bind="title.id3info.metadata.title"></h5>
+                <div class="upartist" ng-bind="title.id3info.metadata.artist"></div>
+            </a>
+        </li>
+    </ul>
+</div>

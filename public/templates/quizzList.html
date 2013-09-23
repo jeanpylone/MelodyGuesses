@@ -1,0 +1,13 @@
+<div>
+    <button class="btn btn-block btn-info" ng-hide="d.currenttitle._new" ng-click="add()">New</button>
+    <ul class="nav nav-pills nav-stacked">
+        <li ng-repeat="quizz in d.list" ng-click="select(quizz)" eat-click>
+            <a href="#" ng-class="{true:'locked', false:''}[quizz.locked]">
+                <glyph icon="lock" ng-show="quizz.locked" class="pull-right"></glyph>
+                <glyph icon="remove" ng-hide="quizz.locked" class="pull-right" ng-click="delete(quizz)"></glyph>
+                <h5 class="uptitle" ng-bind="quizz.name"></h5>
+                <div class="upartist" ng-bind="quizz.titles.count"></div>
+            </a>
+        </li>
+    </ul>
+</div>

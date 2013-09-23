@@ -1,0 +1,187 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.fill {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.leftscroll {
+    width: 217px;
+    overflow: auto;
+    height: 100%;
+}
+
+.leftContent {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    top: 70px;
+    bottom: 0;
+    overflow: hidden;
+}
+.mainContent {
+    position: absolute;
+    left: 200px;
+    right: 0;
+    top: 70px;
+    bottom: 0;
+    overflow: auto;
+}
+
+.main {
+    margin-top: 70px;
+}
+
+.locked {
+  color: #00ff76;
+}
+
+.nodisplay {
+    display: none;
+}
+
+.list-files {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.uptitle{
+
+}
+
+.upartist {
+    text-align: right;
+}
+
+.soundEditor {
+    position: relative;
+    width: 500px;
+    height:50px;
+    background: #808080;
+    overflow: hidden;
+}
+
+.soundRange{
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    overflow: hidden;
+    z-index: 3;
+    opacity: 0.4;
+    top:0px;
+    color: #272b30;
+}
+
+.playBar{
+    position: absolute;
+    height: 50px;
+    width:1px;
+    overflow: hidden;
+    background:red;
+    z-index: 2;
+    top:0px;
+}
+
+.soundRange.guess{
+    background: #fffc00;
+}
+.soundRange.answer{
+     background: #00ff76;
+ }
+
+.nav-pills > li.selected > a,
+.nav-pills > li.selected > a:hover {
+    background-color: none;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#20829f), color-stop(40%, #2596b8), to(#28a4c9));
+    background-image: -webkit-linear-gradient(#20829f, #2596b8 40%, #28a4c9);
+    background-image: -moz-linear-gradient(top, #20829f, #2596b8 40%, #28a4c9);
+    background-image: linear-gradient(#20829f, #2596b8 40%, #28a4c9);
+    background-repeat: no-repeat;
+    color:#ffffff;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff20829f', endColorstr='#ff28a4c9', GradientType=0);
+}
+
+.guessButton {
+    background: #ffe500;
+    width:200px;
+    height:200px;
+    line-height: 184px;
+    text-align:center;
+    color: #222;
+    font-size: 64px;
+    border: solid 8px white;
+}
+
+.guessButton .glyphicon{
+    line-height: 184px;
+    left: 0px;
+    top: -8px;
+}
+
+.title {
+    width:100px;
+    height:100px;
+    line-height: 88px;
+    text-align:center;
+    color: #222;
+    font-size: 24px;
+    border: solid 6px white;
+    display: inline-block;
+}
+
+.T1 {
+    background: #FF66FF;
+}
+.T2 {
+    background: #6666FF;
+}
+.OK {
+    background: #66FF66;
+}
+.valid {
+    background: #66FF66;
+}
+.text-answer {
+    font-size: 96px;
+}
+.text-answer-ctl {
+    font-size: 48px;
+}
+
+.fileerror {
+    color: #F00;
+}
+
+@media (min-width: 992px) {
+    .guessButton {
+        width:300px;
+        height:300px;
+        line-height: 268px;
+        font-size: 96px;
+        border: solid 16px white;
+    }
+
+    .guessButton .glyphicon{
+        line-height: 268px;
+        left: -2px;
+        top: -12px;
+    }
+
+    .title {
+        width:150px;
+        height:150px;
+        line-height: 134px;
+        font-size: 32px;
+    }
+}
