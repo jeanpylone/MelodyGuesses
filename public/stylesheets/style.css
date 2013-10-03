@@ -46,7 +46,7 @@ html, body {
   color: #00ff76;
 }
 
-.nodisplay {
+input.nodisplay {
     display: none;
 }
 

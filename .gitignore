@@ -1,3 +1,9 @@
+public/lib
+node_modules
+.c9revisions
+data/
+mongod_run
+
 #################
 ## Eclipse
 #################
