@@ -9,8 +9,12 @@ var fs = require('fs'),
     server = require('http').createServer(app),
     io = require('./config/io');
 
+var ipaddr  = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+var port    = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('ipaddr', ipaddr);
+app.set('port', port);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(express.favicon(__dirname +'/public/images/favicon.js'));
@@ -30,7 +34,7 @@ if ('development' == app.get('env')) {
 
 config.routing(app, __r);
 
-server.listen(app.get('port'), function(){
+server.listen(app.get('port'), app.get('ipaddr'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 io.config(server);
