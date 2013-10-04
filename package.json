@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+	"postdeploy": "node bower_install.js",
     "start": "node node_app/app.js --websocket-port=$OPENSHIFT_NODEJS_PORT --log-level=1"
   },
   "dependencies": {
