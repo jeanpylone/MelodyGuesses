@@ -3,11 +3,11 @@ var fs = require('fs'),
     mongoose = require('mongoose');
 
 var db_config = {
-//    host : 'localhost',
-//    port : '27017',
-//    user : '',
-//    pass : '',
-    db : 'up'
+    host : process.env.OPENSHIFT_MONGODB_DB_HOST,
+    port : process.env.OPENSHIFT_MONGODB_DB_PORT,
+    user : process.env.OPENSHIFT_MONGODB_DB_USERNAME,
+    pass : process.env.OPENSHIFT_MONGODB_DB_PASSWORD,
+    db : process.env.OPENSHIFT_APP_NAME
 };
 
 exports.getDb = function(){
