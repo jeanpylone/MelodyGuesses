@@ -1,8 +1,5 @@
-var bower = require('bower'),
-    path = require('path');
+var bower = require('bower');
 
-bower.commands
-.install([])
-.on('end', function (installed) {
-    console.log(installed);
+bower.commands.install([]).on('end', function (installed) {
+    console.log("bower installed packages");
 });
